@@ -26,7 +26,7 @@ body{
     display: flex;
     padding: 0.5rem;
 
-    color: white;
+    /* color: white; */
 }
 
 /* hero section */
@@ -42,6 +42,11 @@ body{
     background-position: center;
 }
 
+.headline, .quote{
+    width: 100%;
+    color: white;
+}
+
 .headline{
     font-size: 2.8rem;
     text-wrap: balance;
@@ -54,7 +59,75 @@ body{
     padding: 0.5rem max(2rem, 8%) 2rem max(2rem, 8%);
 }
 
+/* form section */
+
 #form-section{
     flex: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    color: var(--text-color);
+    overflow: auto;
 }
 
+header{
+    width: 100%;
+}
+
+.logo-and-name{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo{
+    width: 30px;
+}
+
+.logo-name{
+    font-size: 1.5rem;
+    color: inherit;
+}
+
+/* main section in form */
+
+main{
+    width: min(80%, 500px);
+}
+
+.cta-heading{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.cta-text{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+form{
+    margin-top: 2rem;
+}
+
+form > div {
+    margin-top: 0.8rem;
+}
+
+.form-input{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+}
+
+.two-columns{
+    display: flex;
+    gap: 1.5rem;
+}
+
+label{
+    font-size: 1rem;
+}
