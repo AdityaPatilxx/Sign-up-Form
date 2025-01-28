@@ -13,92 +13,79 @@
   </head>
 
   <body>
-    <div id="hero">
-      <div class="hero-upper">
-        <div class="logo-and-name">
-          <div class="logo-name">Orbitus</div>
-        </div>
-      </div>
-      <div class="hero-lower">
-        <h1 class="headline">Join the Orbitus Mars Mission Today</h1>
-        <p class="quote">
-          Become a key player in Mars colonization. Choose your role, customize
-          your ship, and shape the future of the red planet.
-        </p>
-      </div>
-    </div>
-
-    <div id="form-section">
-      <header></header>
-
-      <main>
-        <div class="cta-heading">Create an account</div>
-        <div class="cta-text">
-          It’s time to forge your legacy in the Orbitus universe
-        </div>
-
-        <form action="" method="">
-          <div class="two-columns">
-            <div class="form-input">
-              <label for="first-name">First Name</label>
-              <input type="text" name="first-name" id="first-name" required />
+    <div class="container">
+      <div id="form-section">
+        <header></header>
+        <main class="">
+          <div class="cta-heading">Registration</div>
+          <form action="" method="">
+            <div class="two-columns">
+              <div class="form-input">
+                <label for="first-name">First Name</label>
+                <input type="text" name="first-name" id="first-name" required />
+              </div>
+              <div class="form-input">
+                <label for="last-name">Last Name</label>
+                <input type="text" name="last-name" id="last-name" required />
+              </div>
             </div>
             <div class="form-input">
-              <label for="last-name">Last Name</label>
-              <input type="text" name="last-name" id="last-name" required />
-            </div>
-          </div>
-
-          <div class="form-input">
-            <label for="email">Email</label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="joe@example.com"
-              pattern="^\w+((\.|-)?\w+)+?@\w+(-?\w+)?\.\w{2,3}(\.\w{2,3})?$"
-              required
-            />
-          </div>
-
-          <div class="form-input">
-            <label for="phone-number">Phone Number</label>
-            <input
-              type="tel"
-              name="phone-number"
-              id="phone-number"
-              placeholder="10 digit phone number"
-              pattern="\d{10}"
-            />
-          </div>
-
-          <div class="two-columns">
-            <div class="form-input">
-              <label for="password">Password</label>
-              <input type="password" name="password" id="password" required />
-            </div>
-            <div class="form-input">
-              <label for="confirm-password">Confirm Password</label>
+              <label for="email">Email</label>
               <input
-                type="password"
-                name="confirm-password"
-                id="confirm-password"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="joe@example.com"
+                pattern="^\w+((\.|-)?\w+)+?@\w+(-?\w+)?\.\w{2,3}(\.\w{2,3})?$"
                 required
               />
             </div>
+            <div class="form-input">
+              <label for="phone-number">Phone Number</label>
+              <input
+                type="tel"
+                name="phone-number"
+                id="phone-number"
+                placeholder="10 digit phone number"
+                pattern="\d{10}"
+              />
+            </div>
+            <div class="two-columns">
+              <div class="form-input">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required />
+              </div>
+              <div class="form-input">
+                <label for="confirm-password">Confirm Password</label>
+                <input
+                  type="password"
+                  name="confirm-password"
+                  id="confirm-password"
+                  required
+                />
+              </div>
+            </div>
+            <button type="submit">Sign Up</button>
+          </form>
+          <div class="question">
+            Already have an account?
+            <a href="login.html">Log in</a>
           </div>
-          <button type="submit">Sign Up</button>
-        </form>
-
-        <div class="question">
-          Already have a account?
-          <a href="#">Log in</a>
+        </main>
+        <footer>
+          <div class="credit">Aditya &copy 2025</div>
+        </footer>
+      </div>
+      <div id="hero">
+        <img src="images/planet-mars.svg" alt="" class="svg" />
+        <div class="hero-text">
+          <h1 class="headline">Join the Mars Mission Today</h1>
+          <p class="quote">
+            Ready for the mission of a lifetime? Sign up and prepare for your
+            journey to Mars
+          </p>
         </div>
-      </main>
-
-      <footer>
-        <div class="credit">Aditya &copy 2025</div>
-      </footer>
+      </div>
     </div>
   </body>
 </html>
