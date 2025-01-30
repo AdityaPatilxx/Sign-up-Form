@@ -1,91 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign-Up Form</title>
 
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign-Up Form</title>
 
-    <script src="script.js" defer></script>
-  </head>
+  <link rel="stylesheet" href="reset.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
 
-  <body>
-    <div class="container">
-      <div id="form-section">
-        <header></header>
-        <main class="">
-          <div class="cta-heading">Registration</div>
-          <form action="" method="">
-            <div class="two-columns">
-              <div class="form-input">
-                <label for="first-name">First Name</label>
-                <input type="text" name="first-name" id="first-name" required />
-              </div>
-              <div class="form-input">
-                <label for="last-name">Last Name</label>
-                <input type="text" name="last-name" id="last-name" required />
-              </div>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="form-box registration">
+
+      <form action="">
+        <div class="cta-heading">Registration</div>
+        <form action="" method="">
+          <div class="two-columns">
+            <div class="form-input">
+              <label for="first-name">First Name</label>
+              <input type="text" name="first-name" id="first-name" required />
             </div>
             <div class="form-input">
-              <label for="email">Email</label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="joe@example.com"
-                pattern="^\w+((\.|-)?\w+)+?@\w+(-?\w+)?\.\w{2,3}(\.\w{2,3})?$"
-                required
-              />
+              <label for="last-name">Last Name</label>
+              <input type="text" name="last-name" id="last-name" required />
             </div>
-            <div class="form-input">
-              <label for="phone-number">Phone Number</label>
-              <input
-                type="tel"
-                name="phone-number"
-                id="phone-number"
-                placeholder="10 digit phone number"
-                pattern="\d{10}"
-              />
-            </div>
-            <div class="two-columns">
-              <div class="form-input">
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password" required />
-              </div>
-              <div class="form-input">
-                <label for="confirm-password">Confirm Password</label>
-                <input
-                  type="password"
-                  name="confirm-password"
-                  id="confirm-password"
-                  required
-                />
-              </div>
-            </div>
-            <button type="submit">Sign Up</button>
-          </form>
-          <div class="question">
-            Already have an account?
-            <a href="login.html">Log in</a>
           </div>
-        </main>
-        <footer>
-          <div class="credit">Aditya &copy 2025</div>
-        </footer>
-      </div>
-      <div id="hero">
-        <img src="images/planet-mars.svg" alt="" class="svg" />
-        <div class="hero-text">
+          <div class="form-input">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="joe@example.com"
+              pattern="^\w+((\.|-)?\w+)+?@\w+(-?\w+)?\.\w{2,3}(\.\w{2,3})?$" required />
+          </div>
+          <div class="form-input">
+            <label for="phone-number">Phone Number</label>
+            <input type="tel" name="phone-number" id="phone-number" placeholder="10 digit phone number"
+              pattern="\d{10}" />
+          </div>
+          <div class="two-columns">
+            <div class="form-input">
+              <label for="password">Password</label>
+              <input type="password" name="password" id="password" required />
+            </div>
+            <div class="form-input">
+              <label for="confirm-password">Confirm Password</label>
+              <input type="password" name="confirm-password" id="confirm-password" required />
+            </div>
+          </div>
+          <button type="submit">Sign Up</button>
+        </form>
+        <div class="question">
+          Already have an account?
+          <a href="login.html">Log in</a>
+        </div>
+      </form>
+
+    </div>
+
+    <div class="hero-box">
+      <!-- <img src="images/planet-mars.svg" alt="" class="svg" /> -->
+
+      <div class="hero hero-right">
+        <div>
           <h1 class="headline">Join the Mars Mission Today</h1>
           <p class="quote">
             Ready for the mission of a lifetime? Sign up and prepare for your
             journey to Mars
           </p>
         </div>
+        <button onclick="(change())">active</button>
       </div>
+
+      <!-- <div id="hero hero-left">
+          <div class="hero-text">
+            <h1 class="headline">Welcome Back</h1>
+            <p class="quote">
+              Ready to continue your training? Log in and get closer to your
+              Mars mission.
+            </p>
+          </div>
+          <button onclick="(change())">active</button>
+        </div> -->
+
     </div>
-  </body>
+
+    <img src="images/planet-mars.svg" alt="" class="mars" />
+
+  </div>
+</body>
+
 </html>

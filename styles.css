@@ -21,8 +21,9 @@ body {
   background-color: var(--background-color);
   background-image: url("images/background-stars.svg");
   background-size: center/cover;
-  height: 100vh;
   display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 16px;
   overflow: hidden;
 
@@ -32,23 +33,17 @@ body {
 .container {
   padding: 15px;
   display: flex;
-  min-height: 100vh;
+  height: 100vh;
   overflow: hidden;
   position: relative;
-}
-
-@media only screen and (max-width: 800px) {
-  body {
-    flex-direction: column;
-    height: auto;
-    padding: 0;
-  }
+  width: 100vw;
+  max-width: 1500px;
 }
 
 /* hero section */
 
-#hero {
-  flex: 4;
+.hero {
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -58,19 +53,19 @@ body {
 .svg {
   position: absolute;
   right: -20%; /* Adjust this value to control the position */
-  top: 50%; /* Center vertically */
-  transform: translateY(-50%); /* Center vertically */
+
   width: 1000px;
   z-index: -1; /* Keep it behind the text */
+  transition: transform 1s ease-in-out;
 }
 
-.svg1 {
-  position: absolute;
-  left: -20%; /* Adjust this value to control the position */
-  top: 50%; /* Center vertically */
-  transform: translateY(-50%); /* Center vertically */
-  width: 1000px;
-  z-index: -1; /* Keep it behind the text */
+.svg.active {
+  transform: translateX(-100%);
+  z-index: 1;
+}
+
+.hero-left {
+  visibility: hidden;
 }
 
 .headline,
@@ -80,7 +75,7 @@ body {
 }
 
 .headline {
-  font-size: 4rem;
+  font-size: 3rem;
   text-wrap: balance;
   padding: 0 max(2rem, 8%);
 }
@@ -91,35 +86,46 @@ body {
   padding: 0.5rem max(2rem, 8%) 2rem max(2rem, 8%);
 }
 
-@media only screen and (max-width: 800px) {
-  #hero {
-    flex: none;
-    height: 100vh;
-  }
-
-  .headline {
-    text-align: center;
-    font-size: 2rem;
-  }
-
-  .quote {
-    text-align: center;
-    font-size: 1rem;
-  }
-}
-
 /* form section */
 
-#form-section {
-  flex: 5;
+.form-box {
+  width: min(80%, 500px);
+  position: absolute;
+  height: 100%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  padding: 1rem;
+  padding: 40px;
   color: var(--text-color);
   overflow: hidden;
+}
+
+.hero-box {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 50%;
+  display: flex;
+}
+
+form {
+  width: max(70%, 400px);
+}
+
+.mars {
+  width: 200%;
+  position: absolute;
+  top: -50%;
+  transform: translateX(50%);
+  z-index: -1;
+  transition: transform 1s ease-in-out;
+}
+
+.mars.active {
+  transform: translateX(-50%);
 }
 
 header {
@@ -127,44 +133,11 @@ header {
   height: 37px;
 }
 
-.logo-and-name {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: var(--text-color);
-  margin-top: 70px;
-}
-
-.logo-name {
-  font-size: 4.5rem;
-  visibility: hidden;
-}
-
-@media only screen and (max-width: 800px) {
-  .logo-name {
-    visibility: visible;
-  }
-
-  #form-section {
-    gap: 4rem;
-  }
-}
-
 /* main section in form */
-
-main {
-  width: min(80%, 500px);
-  /* color: #070725; */
-}
 
 .cta-heading {
   font-size: 3.5rem;
   font-weight: 700;
-}
-
-.cta-text {
-  font-size: 1rem;
-  font-weight: 500;
 }
 
 form {
@@ -218,13 +191,6 @@ input:user-valid {
 
 input:user-invalid {
   border: 2px solid var(--error-color);
-}
-
-@media only screen and (max-width: 800px) {
-  .two-columns {
-    flex-direction: column;
-    gap: 0.8rem;
-  }
 }
 
 button[type="submit"] {
