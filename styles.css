@@ -18,6 +18,8 @@
 }
 
 body {
+  height: 100vh;
+  width: 100vw;
   background-color: var(--background-color);
   background-image: url("images/background-stars.svg");
   background-size: center/cover;
@@ -26,18 +28,22 @@ body {
   align-items: center;
   font-size: 16px;
   overflow: hidden;
-
   /* color: white; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
   padding: 15px;
   display: flex;
   height: 100vh;
+  width: 100vw;
   overflow: hidden;
   position: relative;
-  width: 100vw;
+
   max-width: 1500px;
+  border: 1px solid red;
 }
 
 /* hero section */
@@ -48,15 +54,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.svg {
-  position: absolute;
-  right: -20%; /* Adjust this value to control the position */
-
-  width: 1000px;
-  z-index: -1; /* Keep it behind the text */
-  transition: transform 1s ease-in-out;
 }
 
 .svg.active {
@@ -89,6 +86,7 @@ body {
   position: absolute;
   height: 100%;
   width: 50%;
+  right: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -97,27 +95,55 @@ body {
   padding: 40px;
   color: var(--text-color);
   overflow: hidden;
+  transition: 0.6s ease-in-out 1.2s, visibility 0s 0.6s;
 }
 
-.form-box.login {
-  right: 0;
+.container.active .form-box {
+  right: 50%;
+}
+
+.container.active .form-box.registration {
+  visibility: visible;
+}
+
+.container.active .form-box.login {
+  visibility: hidden;
+}
+
+.form-box.registration {
+  visibility: hidden;
 }
 
 .hero {
   position: absolute;
   height: 100%;
   width: 50%;
-  /* right: 0; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* transition: 0.6s ease-in-out; */
   z-index: 3;
+  transition: 0.6s ease-in-out;
 }
 
 .hero.hero-right {
+  right: -50%;
+  transition-delay: 0.6s;
+}
+
+.hero.hero-left {
+  left: 0;
+  transition-delay: 0.6s;
+}
+
+.container.active .hero.hero-left {
+  left: -50%;
+  transition-delay: 0.6s;
+}
+
+.container.active .hero.hero-right {
   right: 0;
+  transition-delay: 0.6s;
 }
 
 form {
@@ -128,13 +154,14 @@ form {
   width: 300%;
   position: absolute;
   top: -50%;
-  transform: translateX(50%);
-  z-index: -1;
+  right: 0;
+  transform: translateX(-50%);
+  z-index: 2;
   transition: transform 1s ease-in-out;
 }
 
-.mars.active {
-  transform: translateX(-50%);
+.container.active .mars {
+  transform: translateX(50%);
 }
 
 header {

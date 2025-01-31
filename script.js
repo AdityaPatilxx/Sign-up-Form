@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 function change() {
-  let mars = document.querySelector('.mars')
+  let mars = document.querySelector('.container')
   let headline = document.querySelector('.headline')
 
   mars.classList.toggle('active')
